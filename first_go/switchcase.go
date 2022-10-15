@@ -5,7 +5,8 @@ import "fmt"
 func main() {
 	noFallthrough()
 	withFallthrough()
-	defaultcase()
+	defaultCase()
+	multiConditionSwitchCase()
 }
 
 func noFallthrough() {
@@ -41,7 +42,7 @@ func withFallthrough() {
 	}
 }
 
-func defaultcase() {
+func defaultCase() {
 	fmt.Println("Default case")
 	x := 1
 	switch {
@@ -55,6 +56,21 @@ func defaultcase() {
 	case (5 == 4):
 		fmt.Println("not true")
 
+	default:
+		fmt.Println("this is default")
+	}
+}
+
+func multiConditionSwitchCase() {
+	fmt.Println("Multi Condition Switch Case")
+	s := "Bond"
+	switch s {
+	case "Moneypenny", "Bond", "dr. No":
+		fmt.Println("Moneypenny, Bond, dr. No")
+	case "M":
+		fmt.Println("M")
+	case "Q":
+		fmt.Println("Q")
 	default:
 		fmt.Println("this is default")
 	}
