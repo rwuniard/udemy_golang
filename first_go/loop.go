@@ -9,6 +9,7 @@ func main() {
 	forWithoutCondition()
 	breakContinue()
 	printAscii()
+	ifInit()
 }
 
 func myloop() {
@@ -70,4 +71,11 @@ func printAscii() {
 		fmt.Printf("%d\t\tunicode=%#U\n", i, i)
 		fmt.Printf("%d\t\tascii=%c\n", i, i)
 	}
+}
+
+func ifInit() {
+	if x := 42; x == 2 {
+		fmt.Println("001")
+	}
+	fmt.Println("001 won't be printed")
 }
