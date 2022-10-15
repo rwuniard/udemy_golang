@@ -76,6 +76,7 @@ func printAscii() {
 func ifInit() {
 	if x := 42; x == 2 {
 		fmt.Println("001")
+		fmt.Println(x)
 	}
 	fmt.Println("001 won't be printed")
 }
