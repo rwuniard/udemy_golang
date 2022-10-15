@@ -7,6 +7,7 @@ func main() {
 	nestedLoop()
 	forCondition()
 	forWithoutCondition()
+	breakContinue()
 }
 
 func myloop() {
@@ -44,5 +45,20 @@ func forWithoutCondition() {
 		}
 		fmt.Println(x)
 		x++
+	}
+}
+
+func breakContinue() {
+	fmt.Println("breakContinue")
+	x := 0
+	for {
+		x++
+		if x%2 != 0 {
+			continue
+		} else if x > 10 {
+			break
+		}
+		fmt.Println(x)
+
 	}
 }
