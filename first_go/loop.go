@@ -8,6 +8,7 @@ func main() {
 	forCondition()
 	forWithoutCondition()
 	breakContinue()
+	printAscii()
 }
 
 func myloop() {
@@ -60,5 +61,13 @@ func breakContinue() {
 		}
 		fmt.Println(x)
 
+	}
+}
+
+func printAscii() {
+	fmt.Println("printingAscii")
+	for i := 33; i <= 122; i++ {
+		fmt.Printf("%d\t\tunicode=%#U\n", i, i)
+		fmt.Printf("%d\t\tascii=%c\n", i, i)
 	}
 }
