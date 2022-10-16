@@ -136,12 +136,12 @@ func exercise9() {
 		`moneypenny_miss`: []string{`James Bond`, `Literature`, `Computer Science`},
 		`no_dr`:           []string{`Being evil`, `Ice cream`, `Sunsets`},
 	}
+	fav["ian"] = []string{"steaks", "cigars", "spy"}
 	for k, v := range fav {
 		fmt.Println("Key: ", k)
 		for i := range v {
 			fmt.Println(v[i])
 		}
-
 	}
 }
 
