@@ -22,6 +22,7 @@ func main() {
 	fmt.Println(p2)
 
 	embeddedStruct()
+	anonymousStruct()
 }
 
 func embeddedStruct() {
@@ -60,4 +61,25 @@ func embeddedStruct() {
 	}
 	// Then you have to specify sa2.person.first to access the value of secretAgent.first.
 	fmt.Println(sa2.first, sa2.person.first, sa2.person.last, sa2.ltk)
+}
+
+func anonymousStruct() {
+	// type me struct {
+	// 	first string
+	// 	last string
+	// 	age int
+	// }
+
+	// Instead creating a type like the code above, we can make it anonymous.
+	p1 := struct {
+		first string
+		last  string
+		age   int
+	}{
+		first: "James",
+		last:  "Bond",
+		age:   33,
+	}
+
+	fmt.Println(p1)
 }
