@@ -11,6 +11,13 @@ func main() {
 	xi := []int{3, 4, 5, 6, 7}
 	x := sum(xi...)
 	fmt.Println("Result of passing xi:", x)
+
+	// You can also pass 0 param
+	result := sum()
+	fmt.Println("Result of passing 0 param: ", result)
+
+	// Call sum2
+	sum2("james")
 }
 
 func sum(x ...int) int {
@@ -25,4 +32,12 @@ func sum(x ...int) int {
 
 	fmt.Println("The total is ", sum)
 	return sum
+}
+
+// The variadic param must be at the end/final parameter in list. The example below won't work.
+// func sum2(x ...int, s string) {
+// It will work fine like this
+func sum2(s string, x ...int) {
+	fmt.Println(x)
+	fmt.Println(s)
 }
