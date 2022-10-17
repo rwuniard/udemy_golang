@@ -4,9 +4,9 @@ import "fmt"
 
 func main() {
 
-	a := func() {
-		fmt.Println("my first func expression")
+	a := func(x int) {
+		fmt.Println("my first func expression, ", x)
 	}
 
-	a()
+	a(43)
 }
