@@ -10,6 +10,9 @@ func main() {
 	s2 := bar()
 	fmt.Printf("s2: %T\n", s2)
 	fmt.Println(s2())
+
+	// or we can do it like this
+	fmt.Println("Direct call:", bar()())
 }
 
 func foo() string {
