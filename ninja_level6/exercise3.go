@@ -17,5 +17,8 @@ func foo() {
 }
 
 func bar() {
+	defer func() {
+		fmt.Println("internal func")
+	}()
 	fmt.Println("bar")
 }
