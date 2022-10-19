@@ -22,6 +22,13 @@ func (ba ByAge) Len() int           { return len(ba) }
 func (ba ByAge) Swap(i, j int)      { ba[i], ba[j] = ba[j], ba[i] }
 func (ba ByAge) Less(i, j int) bool { return ba[i].age < ba[j].age }
 
+// This is to sort it by name
+type ByName []Person
+
+func (bn ByName) Len() int           { return len(bn) }
+func (bn ByName) Swap(i, j int)      { bn[i], bn[j] = bn[j], bn[i] }
+func (bn ByName) Less(i, j int) bool { return bn[i].first < bn[j].first }
+
 func main() {
 	p1 := Person{"James", 32}
 	p2 := Person{"Moneypenny", 27}
@@ -32,6 +39,8 @@ func main() {
 
 	fmt.Println(people)
 	sort.Sort(ByAge(people))
-
 	fmt.Println("After sorting by age:", people)
+
+	sort.Sort(ByName(people))
+	fmt.Println("After sorting by name:", people)
 }
