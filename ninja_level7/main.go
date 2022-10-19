@@ -36,4 +36,6 @@ func exercise2() {
 
 func changeMe(p *person) {
 	(*p).first = "Q"
+	// you can also do this
+	p.first = "M"
 }
