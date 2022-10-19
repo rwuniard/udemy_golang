@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+// Also read this article if you want another example and another perspective of interface
+// https://www.simplilearn.com/tutorials/golang-tutorial/guide-to-golang-interface#:~:text=In%20the%20above%20program%2C%20we%20created%20a%20Motorvehicle%20interface%20with,of%20type%20Motorvehicle%20or%20Newq.
+
 type person struct {
 	first string
 	last  string
