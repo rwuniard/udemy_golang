@@ -2,30 +2,13 @@ package main
 
 import (
 	"fmt"
-	"sync"
-	"sync/atomic"
+	"runtime"
 )
 
-var counter int32
-var wg sync.WaitGroup
-
 func main() {
-	counter = 0
-	const numGoRoutine = 50
-	wg.Add(numGoRoutine)
-
-	for i := 0; i < numGoRoutine; i++ {
-		go incrementor(i)
-	}
-	wg.Wait()
-	fmt.Println("final counter:", counter)
-}
-
-func incrementor(i int) {
-
-	atomic.AddInt32(&counter, 1)
-
-	fmt.Println("goroutine:", i, "counter:", atomic.LoadInt32(&counter))
-
-	wg.Done()
+	// Go run exercise6.go
+	// Go build exercise6.go will build the executable in the current folder
+	// Go install exercise6.go -> will put it in the ~/go/bin folder. This is defined in GOROOT env variable.
+	fmt.Println("OS:", runtime.GOOS)
+	fmt.Println("ARCH:", runtime.GOARCH)
 }
