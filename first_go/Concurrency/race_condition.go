@@ -30,7 +30,7 @@ func main() {
 			counter = v
 			wg.Done()
 		}()
-		fmt.Println("GoRoutine:", runtime.NumGoroutine())
+		// fmt.Println("GoRoutine:", runtime.NumGoroutine())
 	}
 	wg.Wait()
 	fmt.Println("GoRoutine:", runtime.NumGoroutine())
