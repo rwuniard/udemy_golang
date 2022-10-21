@@ -25,6 +25,7 @@ func foo(c chan<- int) {
 		c <- i
 	}
 	// If you don't close c, the program will have a deadlock
+	// The range will keep waiting for another value in the channel until the channel is closed.
 	close(c)
 	w.Done()
 }
