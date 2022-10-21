@@ -14,7 +14,7 @@ func main() {
 	fmt.Println("about to exit")
 }
 
-func receive(c <-chan int, q chan int) {
+func receive(c <-chan int, q <-chan int) {
 	// This will pull all the values from c channel first, then
 	// it will pull the value from q.
 	// I think this is determine by the sequence of when the value is put into the channel.
