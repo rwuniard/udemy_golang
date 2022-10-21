@@ -9,7 +9,7 @@ func main() {
 
 	go func() {
 		for i := 0; i < 5; i++ {
-			c <- i
+			c <- 53
 		}
 	}()
 
