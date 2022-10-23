@@ -4,6 +4,8 @@ import (
 	"testing"
 )
 
+// To Execute this test:
+// go test exercise5_test.go
 func TestAverage(t *testing.T) {
 	var v float64
 	v = Average([]float64{1, 2})
