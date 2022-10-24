@@ -1,6 +1,9 @@
-package math
+package math_test
 
-import "testing"
+import (
+	"fmt"
+	"testing"
+)
 
 // To run
 // go test -> it will run the math_test.go
@@ -17,7 +20,7 @@ func TestSum(t *testing.T) {
 
 	result = Sum(x2...)
 	// This will intentionally to make test to fail
-	expected_result2 := 16
+	expected_result2 := 15
 	if result != expected_result2 {
 		t.Error("Expected result:", expected_result1, " but got:", result)
 	}
@@ -41,4 +44,25 @@ func TestSum2(t *testing.T) {
 			t.Error("Expected result:", result, " but got:", test_set.answer)
 		}
 	}
+}
+
+// This will be showing up in the godoc as an example.
+func ExampleSum() {
+	x1 := []int{1, 3, 4}
+
+	result := Sum(x1...)
+	fmt.Println("The result of Sum:", result)
+	// Output:
+	// The result of Sum: 8
+}
+
+// To run Benchmark
+// go test -bench .
+// or go test -bench=.
+func BenchmarkSum(b *testing.B) {
+	x1 := []int{1, 3, 4}
+	for i := 0; i < b.N; i++ {
+		Sum(x1...)
+	}
+
 }

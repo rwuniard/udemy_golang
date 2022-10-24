@@ -1,4 +1,4 @@
-package math
+package math_test
 
 func Sum(x ...int) int {
 	total := 0
