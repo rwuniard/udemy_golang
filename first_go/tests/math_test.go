@@ -22,3 +22,23 @@ func TestSum(t *testing.T) {
 		t.Error("Expected result:", expected_result1, " but got:", result)
 	}
 }
+
+func TestSum2(t *testing.T) {
+	// Using a struct to make it easier to compile a test set.
+	type test struct {
+		data   []int
+		answer int
+	}
+
+	tests := []test{
+		{[]int{21, 21}, 42},
+		{[]int{1, 2, 3}, 6},
+	}
+
+	for _, test_set := range tests {
+		result := Sum(test_set.data...)
+		if test_set.answer != result {
+			t.Error("Expected result:", result, " but got:", test_set.answer)
+		}
+	}
+}
