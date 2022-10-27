@@ -66,3 +66,15 @@ func BenchmarkSum(b *testing.B) {
 	}
 
 }
+
+// For code coverage
+
+// To run code coverage
+// go test -cover
+
+// go test -coverprofile <filename>
+// This will generate the cover report to a filename.
+
+// To view the report
+// go tool cover -html=mycover.out
+// This will show you which are of the code that is not covered.
